@@ -58,7 +58,7 @@ jobs:
         uses: docker/metadata-action@v3
         with:
           images: |
-            scanlidocker/loraserver-ns
+            scanlidocker/chirpstack-network-server
           tags: |
             type=semver,pattern={{version}}
             type=semver,pattern={{major}}
@@ -83,7 +83,7 @@ jobs:
           platforms: linux/arm/v7
           context: .
           push: true
-          tags: scanlidocker/loraserver-ns:v0.21
+          tags: scanlidocker/chirpstack-network-server:v0.21
           labels: ${{ steps.meta.outputs.labels }}
       -
         name: Image digest
